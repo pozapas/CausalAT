@@ -13,6 +13,10 @@
 
 </div>
 
+> **📌 Note:** For the Census Tract Network Analysis Tool, please check the [Census_Tract_Network branch](https://github.com/pozapas/CausalAT/tree/Census_Tract_Network).
+
+</div>
+
 ## 📋 Overview
 
 **CISD** is a cutting-edge framework that revolutionizes how we understand cause and effect in active transportation systems. By leveraging both traditional causal inference and advanced AI techniques, CISD enables researchers and policymakers to:
