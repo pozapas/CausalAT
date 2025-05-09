@@ -1,0 +1,6 @@
+@echo off
+echo Installing required Python packages...
+pip install geopandas osmnx networkx matplotlib contextily cenpy pandas numpy shapely jupyter
+
+echo Opening Jupyter notebook...
+jupyter notebook "salt_lake_city_network.ipynb"
