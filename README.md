@@ -1,151 +1,278 @@
-# CISD: Causal-Intervention Scenario Design for Active Transportation
+<div align="center">
 
-This package implements the Causal-Intervention Scenario Design (CISD) framework and AI-augmented causal inference approach for active transportation research. CISD combines traditional causal inference methods with advanced AI techniques to analyze active transportation data and estimate the causal effects of infrastructure interventions while accounting for spatial dependencies and longitudinal trends.
+# 🚶‍♀️ CISD: Causal-Intervention Scenario Design 🚴‍♂️
 
-## Overview
+### *Advanced Causal Inference Framework for Active Transportation Research*
 
-CISD treats policy analysis as a two-stage act:
-1. Choose an explicit scenario vector that bundles mediating and moderating features
-2. Apply a treatment indicator to the population, estimating what would happen if the same individuals experienced different treatments while scenario elements remain pinned to user-specified references
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub issues](https://img.shields.io/github/issues/pozapas/CausalAT)](https://github.com/pozapas/CausalAT/issues)
+[![GitHub stars](https://img.shields.io/github/stars/pozapas/CausalAT)](https://github.com/pozapas/CausalAT/stargazers)
 
-The framework combines traditional causal inference methods with advanced AI techniques to handle high-dimensional data common in transportation research, such as street-view images, GPS traces, and textual data.
+*Bridging the gap between causality science and active transportation research*
 
-## Key Features
+</div>
 
-- **CISD Framework**: Implementation of the canonical CISD estimand with support for stochastic scenarios
-- **Three-Layer Architecture**: Representation learning (Φ), balancing (Ψ), and causal learning (Γ) components
-- **Multimodal Data Processing**: Support for street imagery, GPS-accelerometer traces, zoning data, and text
-- **Causal Machine Learning**: Doubly robust estimators with semiparametric efficiency
-- **Visualization Tools**: Diagnostic plots for balance checking and effect heterogeneity
-- **Spatial Analysis**: Tools for handling spatial dependencies and geospatial data in causal inference
-- **Longitudinal Data**: Support for panel data analysis with difference-in-differences, fixed effects, synthetic control, and staggered adoption methods
+## 📋 Overview
 
-## Installation
+**CISD** is a cutting-edge framework that revolutionizes how we understand cause and effect in active transportation systems. By leveraging both traditional causal inference and advanced AI techniques, CISD enables researchers and policymakers to:
 
-### Quick Installation
+- **Quantify** the true impact of infrastructure interventions
+- **Account for** complex spatial dependencies and longitudinal trends
+- **Process** multimodal data sources including imagery, GPS traces, and textual data
+- **Generate** robust evidence for evidence-based policy decisions
 
-For development installation (editable mode):
+### The CISD Approach
+
+CISD treats policy analysis as a principled two-stage process:
+
+1. **Define Scenario Vector** → Bundle mediating and moderating features into explicit scenarios
+2. **Apply Treatment Indicator** → Estimate counterfactual outcomes when individuals experience different treatments while scenario elements remain fixed
+
+## ✨ Key Features
+
+<table>
+  <tr>
+    <td width="50%">
+      <h3>🧠 Advanced Framework</h3>
+      <ul>
+        <li><b>CISD Estimand</b>: Implementation of the canonical CISD estimand with support for stochastic scenarios</li>
+        <li><b>Three-Layer Architecture</b>: Representation learning (Φ), balancing (Ψ), and causal learning (Γ) components</li>
+        <li><b>Causal Machine Learning</b>: Doubly robust estimators with semiparametric efficiency guarantees</li>
+      </ul>
+    </td>
+    <td width="50%">
+      <h3>🔍 Data Processing</h3>
+      <ul>
+        <li><b>Multimodal Analysis</b>: Street imagery, GPS-accelerometer traces, zoning data, and textual data</li>
+        <li><b>Spatial Analysis</b>: Specialized tools for handling spatial dependencies and geospatial data</li>
+        <li><b>Longitudinal Methods</b>: Difference-in-differences, fixed effects, synthetic control, and staggered adoption</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>📊 Visualization</h3>
+      <ul>
+        <li><b>Diagnostic Plots</b>: Balance checking and effect heterogeneity visualization</li>
+        <li><b>Interactive Maps</b>: Spatial effect mapping with rich contextual layers</li>
+        <li><b>Model Interpretability</b>: Tools to understand complex causal relationships</li>
+      </ul>
+    </td>
+    <td width="50%">
+      <h3>🌐 Extensible Design</h3>
+      <ul>
+        <li><b>Modular Components</b>: Easily extend or replace individual components</li>
+        <li><b>Integration Support</b>: Works with popular ML frameworks and GIS systems</li>
+        <li><b>Research Ready</b>: Designed to facilitate reproducible transportation research</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+## 🚀 Installation
+
+### Choose your installation path
+
+</div>
+
+### 💨 Quick Installation
+
 ```bash
+# Development mode (editable)
 pip install -e .
-```
 
-For users who want to install from GitHub directly:
-```bash
+# Direct installation from GitHub
 pip install git+https://github.com/pozapas/CausalAT.git
 ```
 
-### Installation with Optional Dependencies
+### 🧩 Installation with Optional Dependencies
 
-For spatial and longitudinal data analysis features:
 ```bash
+# Spatial analysis features
 pip install -e ".[spatial]"
-```
 
-For visualization capabilities:
-```bash
+# Visualization capabilities
 pip install -e ".[viz]"
-```
 
-For full functionality including all optional dependencies:
-```bash
+# Full functionality (all dependencies)
 pip install -e ".[all]"
 ```
 
-### Step-by-step Installation Guide
+### 📝 Step-by-Step Guide
 
-1. Clone the repository:
+<details>
+<summary><b>Expand for detailed installation instructions</b></summary>
+
+1. **Clone the repository**
    ```bash
    git clone https://github.com/pozapas/CausalAT.git
    cd CausalAT
    ```
 
-2. Create a virtual environment (optional but recommended):
+2. **Create a virtual environment** (recommended)
    ```bash
    python -m venv venv
-   venv\Scripts\activate
+   venv\Scripts\activate   # Windows
+   source venv/bin/activate  # Linux/MacOS
    ```
 
-3. Install the package with desired dependencies:
+3. **Install with desired dependencies**
    ```bash
    pip install -e ".[all]"
    ```
 
-4. Verify installation:
+4. **Verify installation**
    ```bash
    python -c "import cisd; print(cisd.__version__)"
    ```
+</details>
 
-### Dependencies
+### 📦 Dependencies
 
-The package has different levels of dependencies:
+<details>
+<summary><b>Core dependencies</b> - Essential libraries for basic functionality</summary>
 
-* **Core dependencies**: 
-  - NumPy, Pandas, SciPy (data handling and computation)
-  - scikit-learn (machine learning algorithms)
-  - TensorFlow/PyTorch (neural networks for representation learning)
-  - NetworkX (basic network analysis)
+- **Data Handling:** NumPy, Pandas, SciPy
+- **Machine Learning:** scikit-learn
+- **Deep Learning:** TensorFlow/PyTorch
+- **Network Analysis:** NetworkX
 
-* **Spatial dependencies**: 
-  - GeoPandas (spatial data handling)
-  - Shapely (geometric objects)
-  - libpysal (spatial weights)
-  - ESDA (exploratory spatial data analysis)
-  - spreg (spatial regression models)
-  - statsmodels (econometric models)
+</details>
 
-* **Visualization**: 
-  - Matplotlib, Seaborn (basic plotting)
-  - Contextily (basemaps for spatial visualization)
-  - Folium (interactive maps)
+<details>
+<summary><b>Spatial dependencies</b> - For geospatial analysis</summary>
 
-* **Network analysis**: 
-  - NetworkX (graph operations)
-  - OSMnx (OpenStreetMap network data)
-  - igraph (optional, for faster network algorithms)
+- **Spatial Data:** GeoPandas, Shapely
+- **Spatial Statistics:** libpysal, ESDA, spreg
+- **Econometric Models:** statsmodels
 
-## Usage
+</details>
 
-See the notebooks directory for tutorials on implementing the CISD framework with different types of transportation data:
+<details>
+<summary><b>Visualization dependencies</b> - For data visualization</summary>
 
-- `cisd_framework_tutorial.ipynb`: Introduction to the CISD framework and concepts
-- `ai_augmented_causal_inference.ipynb`: Using AI for causal inference in transportation research
-- `spatial_temporal_analysis_tutorial.ipynb`: Analyzing spatial-temporal data for transportation infrastructure effects
-- `network_analysis_tutorial.ipynb`: Working with transportation network data and infrastructure interventions
+- **Basic Plotting:** Matplotlib, Seaborn
+- **Geospatial Maps:** Contextily, Folium
+- **Interactive Charts:** Plotly (for interactive dashboards)
 
-## Documentation
+</details>
 
-- `cisd.core`: Core implementation of the CISD framework
-- `cisd.representation`: Neural encoders for multimodal transportation data
-- `cisd.balancing`: Balancing methods for covariate distribution matching
-- `cisd.causal`: Causal estimators with influence function corrections
-- `cisd.ai_pipeline`: End-to-end AI pipelines for causal inference
-- `cisd.spatial_temporal`: Classes and utilities for handling spatial and longitudinal data
-- `cisd.spatial_neighborhood_generator`: Functions for generating synthetic spatial and network data
-- `cisd.visualization`: Visualization tools including spatial effect mapping and diagnostic plots
+<details>
+<summary><b>Network analysis dependencies</b> - For transportation network modeling</summary>
 
-## Citation
+- **Graph Operations:** NetworkX
+- **OSM Integration:** OSMnx (OpenStreetMap data)
+- **Advanced Algorithms:** igraph (optional, performance-optimized)
 
-As the paper is not yet published, please cite this GitHub repository if you use this package in your research:
+</details>
+
+## 💡 Usage
+
+<div align="center">
+
+### Interactive Tutorials & Examples
+
+Explore our comprehensive tutorial notebooks to get started with CISD.
+
+</div>
+
+| Tutorial | Description | Topics |
+|---------|-------------|--------|
+| [📘 CISD Framework](notebooks/cisd_framework_tutorial.ipynb) | Introduction to the CISD framework and concepts | Core concepts, estimands, scenario design |
+| [🤖 AI-Augmented Inference](notebooks/ai_augmented_causal_inference.ipynb) | Using AI for causal inference in transportation research | Neural networks, representation learning, multimodal data |
+| [🗺️ Spatial-Temporal Analysis](notebooks/spatial_temporal_analysis_tutorial.ipynb) | Analyzing spatial-temporal effects of infrastructure interventions | GIS integration, spatial autocorrelation, panel data models |
+| [🔀 Network Analysis](notebooks/network_analysis_tutorial.ipynb) | Working with transportation network data | Graph theory, network metrics, flow modeling |
+
+> **Quick Start:** Begin with the CISD Framework tutorial to understand the fundamental concepts before diving into specialized application areas.
+
+## 📚 Documentation
+
+<div align="center">
+
+### Package Structure & Module Reference
+
+</div>
+
 ```
+cisd/
+├── core                      # Core implementation of CISD framework
+├── representation            # Neural encoders for multimodal data
+├── balancing                 # Covariate distribution matching methods
+├── causal                    # Causal estimators with efficiency guarantees
+├── ai_pipeline               # End-to-end AI workflows for causal inference
+├── spatial_temporal          # Spatial and longitudinal data utilities
+├── spatial_neighborhood_generator  # Synthetic spatial data generation
+└── visualization             # Diagnostic and effect visualization tools
+```
+
+<details>
+<summary><b>Module Details</b></summary>
+
+- **`cisd.core`**: Framework fundamentals, estimand definitions, scenario modeling
+- **`cisd.representation`**: Feature embedding for images, GPS traces, text using neural networks
+- **`cisd.balancing`**: Propensity modeling, entropy balancing, distribution matching algorithms
+- **`cisd.causal`**: Doubly-robust estimators, influence functions, sensitivity analysis
+- **`cisd.ai_pipeline`**: End-to-end workflows connecting all components
+- **`cisd.spatial_temporal`**: Spatial weights, autocorrelation tests, panel data models
+- **`cisd.spatial_neighborhood_generator`**: Synthetic data for testing and benchmarking
+- **`cisd.visualization`**: Interactive plots, spatial effect maps, balance diagnostics
+
+</details>
+
+## 📄 Citation
+
+If you use CISD in your research, please cite our work:
+
+```bibtex
 @software{causalat_cisd,
-  title={CISD: Causal-Intervention Scenario Design for Active Transportation Research},
-  author={Rafe, Amir},
-  url={https://github.com/pozapas/CausalAT},
-  year={2025},
-  month={May}
+  title     = {CISD: Causal-Intervention Scenario Design for Active Transportation Research},
+  author    = {Rafe, Amir},
+  url       = {https://github.com/pozapas/CausalAT},
+  year      = {2025},
+  month     = {May},
+  publisher = {GitHub},
+  version   = {1.0.0}
 }
 ```
 
-## Contributing
+> **Note:** A formal paper describing the methodology is forthcoming. This citation will be updated when published.
 
-Contributions to enhance the CISD package are welcome. Please feel free to submit a pull request or open an issue to discuss potential improvements.
+## 👥 Contributing
+  
+We welcome contributions from researchers, practitioners, and developers!
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+</div>
 
-## License
+**Ways to contribute:**
+- 🐛 Report bugs and issues
+- 💡 Suggest new features or enhancements
+- 🧪 Add test cases
+- 📝 Improve documentation
+- 🔧 Submit pull requests
 
-MIT
+### Contribution Workflow
+
+1. **Fork** the repository
+2. **Clone** your fork: `git clone https://github.com/YOUR-USERNAME/CausalAT.git`
+3. **Create** a feature branch: `git checkout -b feature/amazing-feature`
+4. **Develop** your contribution
+5. **Commit** your changes: `git commit -m 'Add some amazing feature'`
+6. **Push** to your branch: `git push origin feature/amazing-feature`
+7. **Submit** a Pull Request
+
+We strive to maintain high-quality, well-documented code that follows best practices for scientific computing.
+
+## 📜 License
+  
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+  
+</div>
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+---
+  <p>
+    <i>Transforming transportation policy analysis with causal science</i>
+  </p>
+</div>
