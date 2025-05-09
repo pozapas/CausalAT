@@ -89,7 +89,7 @@ If you use this code in your research, please cite:
 ```
 @misc{pozapas2025slcnetwork,
   author = {Amir Rafe},
-  title = {Salt Lake City Census Tract Network},
+  title = {Census Tract Network Analysis Tool},
   year = {2025},
   publisher = {GitHub},
   journal = {GitHub repository},
